@@ -1,6 +1,16 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import type { AppProps } from 'next/app';
+import { Source_Sans_3 } from '@next/font/google';
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+const sourceSans = Source_Sans_3({
+	style: ['normal', 'italic'],
+	weight: ['200', '400', '700', '900'],
+	subsets: ['latin', 'latin-ext'],
+});
+
+const App = ({ Component, pageProps }: AppProps) => (
+	<main className={sourceSans.className}>
+		<Component {...pageProps} />
+	</main>
+);
+
+export default App;
