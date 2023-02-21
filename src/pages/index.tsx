@@ -1,5 +1,7 @@
 import Head from 'next/head';
 
+import QuestionList from '@/components/QuestionList';
+
 const Home = () => (
 	<>
 		<Head>
@@ -11,6 +13,7 @@ const Home = () => (
 			/>
 			<link rel="icon" href="/favicon.ico" />
 		</Head>
+		<QuestionList />
 	</>
 );
 
